@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,9 +9,6 @@ using System.Windows.Input;
 
 namespace VRCOSC
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private string vrcAddress = "127.0.0.1";
@@ -20,20 +16,28 @@ namespace VRCOSC
 
         private string currentText = string.Empty;
 
-
-        public string CurrentText {
-            get 
-            { 
-                return currentText;
-            } 
+        public string CurrentText
+        {
+            get { return currentText; }
             set
-            { 
+            {
                 currentText = value;
                 OnPropertyChanged(nameof(CurrentText));
-            } 
+            }
+        }
+
+        public string VrcAddress
+        {
+            get { return vrcAddress; }
+            set
+            {
+                vrcAddress = value;
+                OnPropertyChanged(nameof(VrcAddress));
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -48,17 +52,15 @@ namespace VRCOSC
 
         public void SendOSCMessage()
         {
-            // /chatbox/input s b
             var message = new SharpOSC.OscMessage("/chatbox/input", CurrentText, true);
-            var sender = new SharpOSC.UDPSender(vrcAddress, vrcPort);
+            var sender = new SharpOSC.UDPSender(VrcAddress, vrcPort);
             sender.Send(message);
         }
 
         public void SendOSCTypingSignal(bool typing)
         {
-            // /chatbox/typing b
             var message = new SharpOSC.OscMessage("/chatbox/typing", typing);
-            var sender = new SharpOSC.UDPSender(vrcAddress, vrcPort);
+            var sender = new SharpOSC.UDPSender(VrcAddress, vrcPort);
             sender.Send(message);
         }
 
