@@ -6,7 +6,7 @@ Simple app that sends messages to VRChat's chatbox via VRC OSC.
 - Very lightweight
 
 ![Demo of usage of VRC OSC Chatbox app](https://i.giphy.com/media/GNrrJ0wm3uWhIjuaFP/giphy.webp)
-![Screenshot of VRC OSC Chatbox app](https://imgur.com/a/kAUKW9r)
+![Screenshot of VRC OSC Chatbox app](https://i.imgur.com/7mezJkP.png)
 
 Youtube guide to install and use: https://www.youtube.com/watch?v=8DqZ7w-ePI0
 
