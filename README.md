@@ -23,3 +23,6 @@ Youtube guide to install and use: https://www.youtube.com/watch?v=8DqZ7w-ePI0
 
 ## License
 MIT
+
+## Contact (dbqt)
+If you have questions or suggestions, feel free to join the Discord: https://discord.gg/kmdh6RQ
