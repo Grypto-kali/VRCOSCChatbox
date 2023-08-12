@@ -16,9 +16,10 @@ Youtube guide to install and use: https://www.youtube.com/watch?v=8DqZ7w-ePI0
 
 ## Usage
 1. Start VRC OSC Chatbox by opening VRCOSCChatBox.exe
-2. In VRChat, make sure you have OSC enabled: https://docs.vrchat.com/docs/osc-overview#enabling-it 
-3. Type your message in the chatbox and send by pressing send or the Enter key!
-4. You can clear your chatbox by sending an empty message.
+2. In VRChat, make sure you have OSC enabled: https://docs.vrchat.com/docs/osc-overview#enabling-it
+3. If you're using a different IP address than the default, enter it in the IP Address field before sending your message. (quest 2)
+4. Type your message in the chatbox and send by pressing send or the Enter key!
+5. You can clear your chatbox by sending an empty message.
 
 ## License
 MIT
