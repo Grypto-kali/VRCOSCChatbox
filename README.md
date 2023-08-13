@@ -1,14 +1,10 @@
 # VRCOSCChatbox
 Simple app that sends messages to VRChat's chatbox via VRC OSC.
 
-- Easy to setup, easy to use
-- Large text box and buttons for easier use while in VR
-- Very lightweight
-
-![Demo of usage of VRC OSC Chatbox app](https://i.giphy.com/media/GNrrJ0wm3uWhIjuaFP/giphy.webp)
 ![Screenshot of VRC OSC Chatbox app](https://i.imgur.com/6I02o6G.png)
 
-Youtube guide to install and use: https://www.youtube.com/watch?v=8DqZ7w-ePI0
+## Activate OSC in VRChat:
+![Enable](https://user-images.githubusercontent.com/43730681/172059335-db3fd6f9-86ae-4f6a-9542-2a74f47ff826.gif)
 
 ## Installation
 1. Get the latest version from [the releases page.](https://github.com/Grypto-kali/VRCOSCChatbox/releases)
