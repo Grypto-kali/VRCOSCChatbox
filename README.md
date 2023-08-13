@@ -11,7 +11,7 @@ Simple app that sends messages to VRChat's chatbox via VRC OSC.
 Youtube guide to install and use: https://www.youtube.com/watch?v=8DqZ7w-ePI0
 
 ## Installation
-1. Get the latest version from [the releases page.](https://github.com/dbqt/VRCOSCChatbox/releases)
+1. Get the latest version from [the releases page.](https://github.com/Grypto-kali/VRCOSCChatbox/releases)
 2. Unzip the entire folder somewhere you will remember.
 
 ## Usage
