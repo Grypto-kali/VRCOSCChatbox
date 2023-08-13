@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Net;
 using System.Windows;
-using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace VRCOSC
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private string vrcAddress = "127.0.0.1";
         private int vrcPort = 9000;
-
         private string currentText = string.Empty;
 
         public string CurrentText
@@ -36,6 +31,16 @@ namespace VRCOSC
             }
         }
 
+        public int VrcPort
+        {
+            get { return vrcPort; }
+            set
+            {
+                vrcPort = value;
+                OnPropertyChanged(nameof(VrcPort));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
@@ -53,14 +58,14 @@ namespace VRCOSC
         public void SendOSCMessage()
         {
             var message = new SharpOSC.OscMessage("/chatbox/input", CurrentText, true);
-            var sender = new SharpOSC.UDPSender(VrcAddress, vrcPort);
+            var sender = new SharpOSC.UDPSender(VrcAddress, VrcPort);
             sender.Send(message);
         }
 
         public void SendOSCTypingSignal(bool typing)
         {
             var message = new SharpOSC.OscMessage("/chatbox/typing", typing);
-            var sender = new SharpOSC.UDPSender(VrcAddress, vrcPort);
+            var sender = new SharpOSC.UDPSender(VrcAddress, VrcPort);
             sender.Send(message);
         }
 
@@ -72,7 +77,6 @@ namespace VRCOSC
         private void UpdateCharacterCount()
         {
             NumberLetter.Text = $"({ChatBox.Text.Length}/144)";
-
             SendOSCTypingSignal(ChatBox.Text.Length > 0);
         }
 
