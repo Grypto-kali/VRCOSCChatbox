@@ -1,7 +1,7 @@
 # VRCOSCChatbox
 Simple app that sends messages to VRChat's chatbox via VRC OSC.
 
-![Screenshot of VRC OSC Chatbox app](https://i.imgur.com/6I02o6G.png)
+![Screenshot of VRC OSC Chatbox app](https://i.imgur.com/kkgiWmp.png)
 
 ## Activate OSC in VRChat:
 ![Enable](https://user-images.githubusercontent.com/43730681/172059335-db3fd6f9-86ae-4f6a-9542-2a74f47ff826.gif)
